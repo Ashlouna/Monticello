@@ -1,0 +1,5 @@
+@mixin txt-style($font-fam, $font-size, $color) {
+  font-family: $font-fam;
+  font-size: $font-size;
+  color: $color;
+}
