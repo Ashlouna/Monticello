@@ -38,6 +38,9 @@ li {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s;
+    @media screen and(orientation: landscape) {
+      bottom: 18px;
+    }
     &:before {
       content: "";
       display: block;
@@ -55,6 +58,13 @@ li {
     }
     &:hover {
       background-color: rgba(239, 244, 248, 0.3);
+    }
+  }
+  .header {
+    &__social-block {
+      @media screen and (max-width: 925px) {
+        display: none;
+      }
     }
   }
 }
@@ -105,9 +115,6 @@ li {
 .social-block {
   @extend %flex-between;
   width: 160px;
-  @media screen and (max-width: 925px) {
-    display: none;
-  }
   &__link {
     text-decoration: none;
   }
@@ -616,20 +623,47 @@ li {
     padding-left: calc(50vw - 300px);
     padding-right: calc(50vw - 300px);
   }
+  @media screen and(max-width: 625px) {
+    padding-left: calc(50vw - 250px);
+    padding-right: calc(50vw - 250px);
+  }
+
   .header {
     padding: 0;
     position: static;
+    @media screen and(max-width: 510px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__logo {
+      @media screen and(max-width: 510px) {
+        margin-bottom: 10px;
+      }
+    }
   }
   &__copy-block {
     align-self: flex-start;
     @include txt-style($nav-font-fam, $nav-font-size, #fff);
+    @media screen and(max-width: 510px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__copy {
     margin-right: 10px;
+    @media screen and(max-width: 510px) {
+      margin: 0;
+    }
   }
   &__who-made {
     border-left: 1px solid #fff;
     padding: 0 0 0 12px;
+    @media screen and(max-width: 510px) {
+      border: none;
+      padding: 0;
+    }
   }
 }
 .form-block {
@@ -645,9 +679,12 @@ li {
   background-color: #fff;
   @extend %background-config;
   padding: 5% 4% 5% 4%;
-  @media screen and(max-width: 810px) {
+  @media screen and(max-width: 902px) {
     width: 70%;
     top: -230px;
+  }
+  @media screen and(max-width: 770px) {
+    top: -100%;
   }
   &__title {
     @include txt-style(
@@ -659,9 +696,22 @@ li {
     @extend %title-style;
     @extend %title-above-score;
     margin-bottom: 7%;
+    @media screen and (max-width: 902px) {
+      &::before {
+        top: -10px;
+      }
+    }
+    @media screen and(max-width: 440px) {
+      &::before {
+        display: none;
+      }
+    }
   }
   &__wrapper {
     @extend %flex-between;
+    @media screen and(max-width: 770px) {
+      flex-direction: column;
+    }
   }
   &__form {
     display: flex;
@@ -681,11 +731,14 @@ li {
       &:focus {
         border-bottom: 1px solid $dark-text-clr;
       }
+      @media screen and(max-width: 770px) {
+        padding-bottom: 8px;
+        margin-bottom: 13px;
+      }
     }
   }
   &__btn {
     @extend %btn;
-    width: 140px;
     margin-left: auto;
   }
 }
@@ -699,6 +752,12 @@ li {
     @include txt-style($nav-font-fam, $nav-font-size, $dark-text-clr);
     &:not(:last-of-type) {
       margin-bottom: 30px;
+      @media screen and(max-width: 770px) {
+        margin-bottom: 12px;
+      }
     }
+  }
+  @media screen and(max-width: 770px) {
+    margin-bottom: 10px;
   }
 }

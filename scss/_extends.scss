@@ -31,8 +31,12 @@
     padding-right: calc(50vw - 500px);
   }
   @media screen and (max-width: 1020px) {
-    padding-left: calc(50vw - 450px);
-    padding-right: calc(50vw - 450px);
+    padding-left: calc(50vw - 400px);
+    padding-right: calc(50vw - 400px);
+  }
+  @media screen and (max-width: 900px) {
+    padding-left: calc(50vw - 330px);
+    padding-right: calc(50vw - 330px);
   }
   @media screen and (max-width: 670px) {
     padding-left: calc(50vw - 280px);
@@ -85,8 +89,7 @@
   font-size: $btn-txt-font-size;
   color: $dark-text-clr;
   text-transform: uppercase;
-  width: 190px;
-  height: 50px;
+  padding: 16px 40px;
   border: 1px solid $dark-text-clr;
   outline: none;
   background: transparent;
@@ -98,5 +101,8 @@
   &:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: scale(0.9);
+  }
+  @media screen and (max-width: 580px) {
+    padding: 10px 20px;
   }
 }
