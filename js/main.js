@@ -194,7 +194,7 @@ function initMap() {
     draggable: true,
     animation: google.maps.Animation.BOUNCE,
     position: { lat: 48.4153146, lng: 35.0694236 },
-    icon: "../img/pin.png",
+    icon: "../img/pin.PNG",
   });
   marker.addListener("click", toggleBounce);
 
