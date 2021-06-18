@@ -26,14 +26,59 @@
 %dinamic-paddings {
   padding-left: calc(50vw - 580px);
   padding-right: calc(50vw - 580px);
+  @media screen and (max-width: 1180px) {
+    padding-left: calc(50vw - 500px);
+    padding-right: calc(50vw - 500px);
+  }
+  @media screen and (max-width: 1020px) {
+    padding-left: calc(50vw - 450px);
+    padding-right: calc(50vw - 450px);
+  }
+  @media screen and (max-width: 670px) {
+    padding-left: calc(50vw - 280px);
+    padding-right: calc(50vw - 280px);
+  }
+  @media screen and (max-width: 580px) {
+    padding-left: calc(50vw - 240px);
+    padding-right: calc(50vw - 240px);
+  }
+  @media screen and (max-width: 500px) {
+    padding-left: calc(50vw - 200px);
+    padding-right: calc(50vw - 200px);
+  }
+  @media screen and (max-width: 420px) {
+    padding-left: calc(50vw - 150px);
+    padding-right: calc(50vw - 150px);
+  }
 }
 %background-config {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 %title-style {
   text-align: center;
   text-transform: uppercase;
+}
+%title-above-score {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: $dark-text-clr;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -50px;
+    @media screen and(max-width: 1150px) {
+      top: -20px;
+    }
+    @media screen and(max-width: 420px) {
+      top: -10px;
+    }
+  }
 }
 %btn {
   font-family: $btn-txt-font-fam;

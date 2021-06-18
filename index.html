@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -68,10 +70,10 @@
                 <h3 class="main-subtitle">We make the world's beautiful every day</h3>
             </div>
         </div>
-        <button class="main-section__arrow" type="button"></button>
+        <a class="main-section__arrow arrow" href="#projects"></a>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2 class="projects__title">what we do</h2>
         <article class="projects__block project-block">
             <div class="project-block__img">
@@ -115,12 +117,149 @@
 
         </article>
     </section>
+
+    <section class="news">
+        <h2 class="news__title">latest news</h2>
+        <div class="news__slider">
+            <div class="news__item news-article">
+                <img src="./img/news1.png" alt="Unmatched beauty">
+                <div class="news-article__wrapper">
+                    <h3 class="news-article__title">See The Unmatched Beauty<br> Of The Great. Lakes.</h3>
+                    <p class="news-article__txt">Free directories: directories are perfect for customers that are...
+                        searching for a
+                    </p>
+                    <div class="news-article__author author-block">
+                        <img src="./img/isaac_dunn.png" alt="Isaac Dunn">
+                        <div class="author-block__wrapper">
+                            <p class="author-block__name">Isaac Dunn</p>
+                            <p class="author-block__date">09 Feb 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news__item news-article">
+                <img src="./img/news2.png" alt="Effective advertising">
+                <div class="news-article__wrapper">
+                    <h3 class="news-article__title">Effective Advertising<br> Pointers.</h3>
+                    <p class="news-article__txt">Having a home based business is a wonderful asset to your life...</p>
+                    <div class="news-article__author author-block">
+                        <img src="./img/dominic_freeman.png" alt="Dominic Freeman">
+                        <div class="author-block__wrapper">
+                            <p class="author-block__name">Dominic Freeman</p>
+                            <p class="author-block__date">24 Apr 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news__item news-article">
+                <img src="./img/news3.png" alt="Hypnotize yourself">
+                <div class="news-article__wrapper">
+                    <h3 class="news-article__title">Hypnotize Yourself Into The<br> Ghost.
+                        Of Christmas Future</h3>
+                    <p class="news-article__txt">There are many things that are important to catalog design....</p>
+                    <div class="news-article__author author-block">
+                        <img src="./img/alice_ward.png" alt="Alice Ward">
+                        <div class="author-block__wrapper">
+                            <p class="author-block__name">Alice Ward</p>
+                            <p class="author-block__date">30 Dec 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news__item news-article">
+                <img src="./img/news1.png" alt="Unmatched beauty">
+                <div class="news-article__wrapper">
+                    <h3 class="news-article__title">See The Unmatched Beauty<br> Of The Great. Lakes.</h3>
+                    <p class="news-article__txt">Free directories: directories are perfect for customers that are...
+                        searching for a</p>
+                    <div class="news-article__author author-block">
+                        <img src="./img/isaac_dunn.png" alt="Isaac Dunn">
+                        <div class="author-block__wrapper">
+                            <p class="author-block__name">Isaac Dunn</p>
+                            <p class="author-block__date">09 Feb 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2 class="gallery__title">gallery</h2>
+        <div class="gallery__content">
+            <div class="gallery__big-img" id="big-img">
+                <img src="./img/scott-webb.png" alt="Scott Webb">
+            </div>
+            <div class="gallery__wrapper-img">
+                <div class="gallery__img"><img src="./img/gallery1.png" alt="Building 1"></div>
+                <div class="gallery__img"><img src="./img/gallery2.png" alt="Building 2"></div>
+                <div class="gallery__img"><img src="./img/gallery3.png" alt="Building 3"></div>
+                <div class="gallery__img"><img src="./img/gallery4.png" alt="Building 4"></div>
+            </div>
+        </div>
+        <button class="gallery__btn">see more</button>
+    </section>
+
+    <section class="map" id="map">
+
+    </section>
+
+    <section class="footer">
+        <div class="footer__form form-block">
+            <h2 class="form-block__title">get in touch</h2>
+            <div class="form-block__wrapper">
+                <div class="form-block__contacts contacts">
+                    <ul class="contacts__list">
+                        <li class="contacts__item"><i class="fas fa-map-marker-alt"></i>91 Nolan Extensions Suite 670
+                        </li>
+                        <li class="contacts__item"><a href="tel:+001 356-868-2454"><i class="fas fa-phone-alt"></i>+001
+                                356-868-2454</a></li>
+                        <li class="contacts__item"><a href="mailto:gahuy93@gmail.com"><i
+                                    class="fas fa-inbox"></i>gahuy93@gmail.com</a></li>
+                        <li class="contacts__item"><i class="far fa-clock"></i>From 07:05AM to 19:30PM</li>
+                    </ul>
+                </div>
+                <form action="#" class="form-block__form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" name="email" id="emailInp" placeholder="Email">
+                    <button class="form-block__btn" type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+        <header class="header">
+            <span class="header__logo"><a href="#"><img src="./img/header-logo.svg" alt="Monticello"></a></span>
+            <div class="header__social-block social-block">
+                <a href="#" class="social-block__link">
+                    <svg class="social-block__icon">
+                        <use xlink:href="./img/social-sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social-block__link">
+                    <svg class="social-block__icon">
+                        <use xlink:href="./img/social-sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social-block__link">
+                    <svg class="social-block__icon">
+                        <use xlink:href="./img/social-sprite.svg#insta"></use>
+                    </svg>
+                </a>
+            </div>
+        </header>
+        <p class="footer__copy-block">
+            <span class="footer__copy">Copyrights © 2017 Monticello</span>
+            <span class="footer__who-made">Made with <i class="fas fa-heart"></i> by Ga Huy</span>
+
+        </p>
+    </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <!-- <script async defer
+    <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtpeUStCgloasgBKYIP1iLLE6VABFWQQ8&callback=initMap"
-        type="text/javascript"></script> -->
+        type="text/javascript"></script>
 </body>
 
 </html>
