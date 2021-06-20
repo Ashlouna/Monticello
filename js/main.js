@@ -3,7 +3,7 @@
 const burger = document.querySelector("#burger");
 const headerNav = document.querySelector("#header-nav")
 burger.onclick = () => {
-  burger.children[0].classList.toggle("checked");
+  burger.classList.toggle("checked");
   headerNav.classList.toggle("mobile");
 }
 
@@ -193,14 +193,17 @@ function initMap() {
     position: { lat: 48.4153146, lng: 35.0694236 },
     icon: "./img/pin.PNG",
   });
-  marker.addListener("click", toggleBounce);
+  // marker.addListener("click", toggleBounce);
 
   const infowindow = new google.maps.InfoWindow({
     content: "<h1>I am here!</h1>"
   });
+
   marker.addListener("click", () => {
     infowindow.open(map, marker);
+    toggleBounce();
   });
+
   function toggleBounce() {
   if (marker.getAnimation() !== null) {
     marker.setAnimation(null);
