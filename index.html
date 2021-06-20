@@ -19,12 +19,12 @@
     <section class="main-section">
         <header class="header">
             <span class="header__logo"><a href="#"><img src="./img/header-logo.svg" alt="Monticello"></a></span>
-            <nav class="header__nav nav">
+            <nav class="header__nav nav" id="header-nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#" class="nav__link">about us</a> </li>
-                    <li class="nav__item"><a href="#" class="nav__link">projects</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">news</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">contacts</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">projects</a></li>
+                    <li class="nav__item"><a href="#news" class="nav__link">news</a></li>
+                    <li class="nav__item"><a href="#footer" class="nav__link">contacts</a></li>
                 </ul>
             </nav>
             <div class="header__social-block social-block">
@@ -44,6 +44,10 @@
                     </svg>
                 </a>
             </div>
+            <div class="header__burger burger-btn" id="burger">
+                <div class=" burger-img"></div>
+            </div>
+
         </header>
         <div class="slider">
             <div class="slider__item slider__item_theme_main">
@@ -115,7 +119,7 @@
         </article>
     </section>
 
-    <section class="news">
+    <section class="news" id="news">
         <h2 class="news__title">latest news</h2>
         <div class="news__slider">
             <div class="news__item news-article">
@@ -181,7 +185,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <h2 class="gallery__title">gallery</h2>
         <div class="gallery__content">
             <div class="gallery__big-img" id="big-img">
@@ -201,7 +205,7 @@
 
     </section>
 
-    <section class="footer">
+    <section class="footer" id="footer">
         <div class="footer__form form-block">
             <h2 class="form-block__title">get in touch</h2>
             <div class="form-block__wrapper">
@@ -248,7 +252,6 @@
         <p class="footer__copy-block">
             <span class="footer__copy">Copyrights © 2017 Monticello</span>
             <span class="footer__who-made">Made with <i class="fas fa-heart"></i> by Ga Huy</span>
-
         </p>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

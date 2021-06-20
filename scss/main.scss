@@ -38,7 +38,7 @@ li {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s;
-    @media screen and(orientation: landscape) {
+    @media screen and(max-width: 1200px) and(orientation: landscape) {
       bottom: 18px;
     }
     &:before {
@@ -82,23 +82,47 @@ li {
 .nav {
   width: 55%;
   @media screen and (max-width: 1020px) {
-    width: 45%;
+    width: 48%;
   }
   @media screen and (max-width: 925px) {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    padding: 27px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
   }
   &__list {
     @extend %flex-between;
     list-style-type: none;
+    @media screen and (max-width: 925px) {
+      flex-direction: column;
+    }
+  }
+  .mobile &__list {
+    flex-direction: column;
   }
   &__item {
     @include txt-style($nav-font-fam, $nav-font-size, #fff);
     text-transform: uppercase;
+    @media screen and (max-width: 925px) {
+      text-align: center;
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
     &:hover .nav__link::before {
       background-color: #fff;
     }
   }
   &__link {
+    transition: all 0.3s;
+    @media screen and (max-width: 925px) {
+      &:hover {
+        color: $lighter-main-bg-clr;
+      }
+    }
     &::before {
       content: "";
       width: 10px;
@@ -109,9 +133,71 @@ li {
       border-radius: 50%;
       margin-right: 10px;
       transition: background-color 0.4s;
+      @media screen and (max-width: 925px) {
+        display: none;
+      }
+    }
+  }
+  &.mobile {
+    transition: all 0.3s;
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    background-color: rgba(26, 34, 41, 0.8);
+  }
+}
+
+.burger-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -20px;
+  cursor: pointer;
+  .burger-img {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    display: none;
+    border-radius: 5px;
+    transition: all 0.4s;
+    @media screen and (max-width: 925px) {
+      display: block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      width: 35px;
+      height: 2px;
+      left: 0;
+      border-radius: 5px;
+    }
+    &::before {
+      top: -10px;
+    }
+    &::after {
+      top: 10px;
+    }
+    &.checked {
+      transform: rotateZ(45deg);
+    }
+    &.checked::before {
+      display: none;
+    }
+    &.checked::after {
+      transform: rotateZ(-90deg);
+      left: 0px;
+      top: 1px;
     }
   }
 }
+
 .social-block {
   @extend %flex-between;
   width: 160px;
@@ -240,8 +326,10 @@ li {
 // Projects section
 .projects {
   @extend %dinamic-paddings;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  @include adaptiv-css("padding-bottom", 140, 30);
+  @include adaptiv-css("padding-top", 135, 30);
+  // padding-top: 10%;
+  // padding-bottom: 10%;
   overflow: hidden;
   &__title {
     @include txt-style(
@@ -370,8 +458,8 @@ li {
     linear-gradient(to right top, $deep-news-bg-clr, $lighter-news-bg-clr);
   @extend %background-config;
   @extend %dinamic-paddings;
-  padding-bottom: 9%;
-  padding-top: 9%;
+  @include adaptiv-css("padding-top", 135, 30);
+  @include adaptiv-css("padding-bottom", 140, 70);
   @media screen and(max-width: 1020px) {
     padding-bottom: 12%;
   }
@@ -498,6 +586,7 @@ li {
   }
   &__title {
     @include txt-style($whatwedo-title-font-fam, 20px, $dark-text-clr);
+    @include adaptiv-css("font-size", 20, 16);
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -535,8 +624,8 @@ li {
 
 .gallery {
   @extend %dinamic-paddings;
-  padding-top: 9%;
-  padding-bottom: 11%;
+  @include adaptiv-css("padding-top", 135, 30);
+  @include adaptiv-css("padding-bottom", 140, 35);
   &__title {
     @include txt-style(
       $section-title-font-fam,
@@ -615,8 +704,8 @@ li {
   position: relative;
   background-image: url("../img/footer-bg.png"),
     linear-gradient(to right top, $lighter-main-bg-clr, $deep-main-bg-clr);
-  padding-top: 12%;
-  padding-bottom: 12%;
+  @include adaptiv-css("padding-top", 195, 30);
+  @include adaptiv-css("padding-bottom", 205, 30);
   padding-left: calc(50vw - 385px);
   padding-right: calc(50vw - 385px);
   @media screen and(max-width: 810px) {
@@ -631,6 +720,8 @@ li {
   .header {
     padding: 0;
     position: static;
+    height: auto;
+    margin-bottom: 35px;
     @media screen and(max-width: 510px) {
       flex-direction: column;
       justify-content: center;
@@ -655,6 +746,7 @@ li {
     margin-right: 10px;
     @media screen and(max-width: 510px) {
       margin: 0;
+      margin-bottom: 5px;
     }
   }
   &__who-made {
@@ -670,7 +762,7 @@ li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -50%;
+  top: -280px;
   display: flex;
   flex-direction: column;
   max-width: 770px;
@@ -684,7 +776,10 @@ li {
     top: -230px;
   }
   @media screen and(max-width: 770px) {
-    top: -100%;
+    top: -310px;
+  }
+  @media screen and(max-width: 510px) {
+    top: -290px;
   }
   &__title {
     @include txt-style(

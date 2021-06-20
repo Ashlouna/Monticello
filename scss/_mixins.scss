@@ -8,3 +8,12 @@
     #{$min} + (#{$max} - #{$a}) * ((#{$vw} - #{$mobScreen}) / (1550 - 320))
   );
 }
+
+$maxWidth: 1574;
+@mixin adaptiv-css($cssRule, $pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  #{$cssRule}: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}

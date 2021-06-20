@@ -1,5 +1,13 @@
 "use strict";
 
+const burger = document.querySelector("#burger");
+const headerNav = document.querySelector("#header-nav")
+burger.onclick = () => {
+  burger.children[0].classList.toggle("checked");
+  headerNav.classList.toggle("mobile");
+}
+
+
 $(document).ready(function () {
     $('.slider').slick({
         slidesToShow: 1,
@@ -77,19 +85,7 @@ $(document).ready(function () {
 });
 
 
-function setHeightSlide() {
-  let track = document.querySelector(".news__item").parentElement;
-  let heightTrack = track.offsetHeight;
-  console.log(track);
-  console.log(heightTrack);
-  let slides = document.querySelectorAll(".news__item");
-  let arr = [...slides];
-  for (let item of arr) {
-    item.style.height = heightTrack;
-  }
-  // slides.style.height = heightTrack;
-}
-setHeightSlide();
+
 let img = document.querySelectorAll(".gallery__img");
 let arr = [...img];
 for (let item of arr) {
@@ -101,6 +97,7 @@ function changeImg(){
   let img = this.innerHTML;
   bigImg.innerHTML = img;
 }
+
 let map;
 
 function initMap() {
@@ -194,7 +191,7 @@ function initMap() {
     draggable: true,
     animation: google.maps.Animation.BOUNCE,
     position: { lat: 48.4153146, lng: 35.0694236 },
-    icon: "../img/pin.PNG",
+    icon: "./img/pin.PNG",
   });
   marker.addListener("click", toggleBounce);
 
