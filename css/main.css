@@ -409,6 +409,8 @@ li {
   border-radius: 5px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 @media screen and (max-width: 925px) {
