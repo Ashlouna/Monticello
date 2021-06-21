@@ -2,13 +2,49 @@
 
 const burger = document.querySelector("#burger");
 const headerNav = document.querySelector("#header-nav")
+
 burger.onclick = () => {
   burger.classList.toggle("checked");
   headerNav.classList.toggle("mobile");
 }
 
+let isEndAnimateLeft = true;
+let isEndAnimateRight = true;
+
+window.addEventListener("scroll", () => {
+  const weDoSection = document.querySelector("#projects");
+  const projectsArticle = document.querySelector("#projects-article");
+  const projectImgLeft = document.querySelector("#project-img-left");
+  const projectImgRight = document.querySelector("#project-img-right");
+
+  const fakeImgLeft = document.querySelector("#fake-img-left");
+  const fakeImgRight = document.querySelector("#fake-img-right");
+  let articleCoordY = projectsArticle.getBoundingClientRect().y;
+  let weDoCoordY = weDoSection.getBoundingClientRect().y;
+
+  if (isEndAnimateLeft && weDoCoordY < 80) {
+    projectImgLeft.classList.add("animate");
+    setTimeout(() => {
+      projectImgLeft.classList.remove("animate");
+      projectImgLeft.classList.add("end-animate");
+      fakeImgLeft.remove();
+    }, 1500);
+    isEndAnimateLeft = false;
+  } else if(isEndAnimateRight && articleCoordY < 170) {
+    projectImgRight.classList.add("animate");
+    setTimeout(() => {
+      projectImgRight.classList.remove("animate");
+      projectImgRight.classList.add("end-animate");
+      fakeImgRight.remove();
+    }, 2000);
+    isEndAnimateRight = false;
+  }
+})
+
+
 
 $(document).ready(function () {
+
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -17,37 +53,9 @@ $(document).ready(function () {
         adaptiveHeight: true,
         autoplay: false,
         centerPadding: "20px",
-    //     responsive: [
-    // {
-    //   breakpoint: 992,
-    //   settings: {
-    //     arrows: false,
-    //     centerMode: true,
-    //     centerPadding: '40px',
-    //     slidesToShow: 2
-    //   }
-    // },
-    // {
-    //   breakpoint: 768,
-    //   settings: {
-    //     arrows: false,
-    //     centerMode: true,
-    //     centerPadding: '40px',
-    //     slidesToShow: 1
-    //   }
-    //         },
-    // {
-    //   breakpoint: 480,
-    //   settings: {
-    //     arrows: false,
-    //     centerMode: true,
-    //     centerPadding: "0",
-    //     slidesToShow: 1
-    //   }
-    // }
-    //     ],
-        
+    
     })
+  
   $('.news__slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -91,7 +99,7 @@ let arr = [...img];
 for (let item of arr) {
   item.onclick = changeImg;
 }
-
+// По клику меняет большую картинку в галерее
 function changeImg(){
   let bigImg = document.querySelector("#big-img");
   let img = this.innerHTML;
@@ -103,7 +111,7 @@ let map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 48.4153146, lng: 35.0694236 },
-      zoom: 16,
+    zoom: 16,
     styles: [
       { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
       { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -205,12 +213,12 @@ function initMap() {
   });
 
   function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
   }
-}
 }
 
 
