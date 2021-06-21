@@ -308,7 +308,7 @@ li {
 }
 .main-title {
   @include txt-style($main-title-font-fam, $main-title-font-size, #fff);
-  @include adaptive-font(40px, 80, 40);
+  @include adaptiv-css("font-size", 80, 40);
   @extend %title-style;
   @media screen and(max-width: 550px) {
     width: 85%;
@@ -316,7 +316,7 @@ li {
 }
 .main-subtitle {
   @include txt-style($subtitle-font-fam, $subtitle-font-size, #fff);
-  @include adaptive-font(16px, 18, 16);
+  @include adaptiv-css("font-size", 18, 16);
   @extend %title-style;
   letter-spacing: 3px;
   @media screen and(max-width: 550px) {
@@ -337,7 +337,7 @@ li {
       $section-title-font-size,
       $dark-text-clr
     );
-    @include adaptive-font(20px, 44, 20);
+    @include adaptiv-css("font-size", 44, 20);
     @extend %title-style;
     @extend %title-above-score;
     margin-bottom: 10%;
@@ -464,7 +464,7 @@ li {
       $section-title-font-size,
       $dark-text-clr
     );
-    @include adaptive-font(20px, 44, 20);
+    @include adaptiv-css("font-size", 44, 20);
     @extend %title-style;
     text-align: unset;
     margin-bottom: 30px;
@@ -521,7 +521,7 @@ li {
   }
   &__title {
     @include txt-style($section-title-font-fam, $section-title-font-size, #fff);
-    @include adaptive-font(20px, 44, 20);
+    @include adaptiv-css("font-size", 44, 20);
     @extend %title-style;
     @extend %title-above-score;
     margin-bottom: 5%;
@@ -684,7 +684,7 @@ li {
       $section-title-font-size,
       $dark-text-clr
     );
-    @include adaptive-font(20px, 44, 20);
+    @include adaptiv-css("font-size", 44, 20);
     @extend %title-style;
     @extend %title-above-score;
     margin-bottom: 7%;
@@ -848,7 +848,7 @@ li {
       $section-title-font-size,
       $dark-text-clr
     );
-    @include adaptive-font(20px, 44, 20);
+    @include adaptiv-css("font-size", 44, 20);
     @extend %title-style;
     @extend %title-above-score;
     margin-bottom: 7%;

@@ -562,7 +562,7 @@ li {
   font-family: "Gotham bold", sans-serif;
   font-size: 80px;
   color: #fff;
-  font-size: calc( 40px + (80 - 40) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 40px + 40 * ((100vw - 320px) / 1254));
 }
 
 @media screen and (max-width: 550px) {
@@ -575,7 +575,7 @@ li {
   font-family: "Gotham book", sans-serif;
   font-size: 18px;
   color: #fff;
-  font-size: calc( 16px + (18 - 16) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 16px + 2 * ((100vw - 320px) / 1254));
   letter-spacing: 3px;
 }
 
@@ -596,7 +596,7 @@ li {
   font-family: "Gotham bold", sans-serif;
   font-size: 44px;
   color: #2c4058;
-  font-size: calc( 20px + (44 - 20) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 20px + 24 * ((100vw - 320px) / 1254));
   margin-bottom: 10%;
 }
 
@@ -769,7 +769,7 @@ li {
   font-family: "Gotham medium", sans-serif;
   font-size: 44px;
   color: #2c4058;
-  font-size: calc( 20px + (44 - 20) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 20px + 24 * ((100vw - 320px) / 1254));
   text-align: unset;
   margin-bottom: 30px;
 }
@@ -835,7 +835,7 @@ li {
   font-family: "Gotham medium", sans-serif;
   font-size: 44px;
   color: #fff;
-  font-size: calc( 20px + (44 - 20) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 20px + 24 * ((100vw - 320px) / 1254));
   margin-bottom: 5%;
 }
 
@@ -1064,7 +1064,7 @@ li {
   font-family: "Gotham medium", sans-serif;
   font-size: 44px;
   color: #2c4058;
-  font-size: calc( 20px + (44 - 20) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 20px + 24 * ((100vw - 320px) / 1254));
   margin-bottom: 7%;
 }
 
@@ -1299,7 +1299,7 @@ li {
   font-family: "Gotham medium", sans-serif;
   font-size: 44px;
   color: #2c4058;
-  font-size: calc( 20px + (44 - 20) * ((100vw - 320px) / (1550 - 320)));
+  font-size: calc( 20px + 24 * ((100vw - 320px) / 1254));
   margin-bottom: 7%;
 }
 

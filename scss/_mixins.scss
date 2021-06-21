@@ -3,13 +3,7 @@
   font-size: $font-size;
   color: $color;
 }
-@mixin adaptive-font($min, $max, $a) {
-  font-size: calc(
-    #{$min} + (#{$max} - #{$a}) * ((#{$vw} - #{$mobScreen}) / (1550 - 320))
-  );
-}
 
-$maxWidth: 1574;
 @mixin adaptiv-css($cssRule, $pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - 320;
