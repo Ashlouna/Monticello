@@ -37,6 +37,7 @@ li {
     border: 1px solid #fff;
     border-radius: 50%;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transition: all 0.3s;
     @media screen and(max-width: 1200px) and(orientation: landscape) {
       bottom: 18px;
@@ -73,12 +74,12 @@ li {
   @extend %flex-between-center;
   @include adaptiv-css("height", 150, 95);
   width: 100%;
-  // height: 150px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   &__logo {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     & img {
       @include adaptiv-css("width", 241, 150);
     }
@@ -111,6 +112,7 @@ li {
   }
   &__item {
     @include txt-style($nav-font-fam, $nav-font-size, #fff);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-transform: uppercase;
     @media screen and (max-width: 925px) {
       text-align: center;
@@ -160,7 +162,12 @@ li {
   right: 15px;
   top: 50%;
   margin-top: -20px;
+  display: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @media screen and (max-width: 925px) {
+    display: block;
+  }
   .first-bar,
   .second-bar,
   .third-bar {
@@ -168,13 +175,9 @@ li {
     height: 2px;
     position: absolute;
     background-color: #fff;
-    display: none;
     border-radius: 5px;
     transition: all 0.4s;
     transform: translateZ(0);
-    @media screen and (max-width: 925px) {
-      display: block;
-    }
   }
   .first-bar {
     top: 0;
@@ -204,6 +207,7 @@ li {
   width: 160px;
   &__link {
     text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   &__icon {
     border: 1px solid #fff;
@@ -395,7 +399,7 @@ li {
     left: -1000px;
     z-index: 2;
     opacity: 0;
-    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
     img {
       max-width: 100%;
     }
@@ -774,7 +778,6 @@ li {
     position: static;
     height: auto;
     @include adaptiv-css("margin-bottom", 35, 10);
-    // margin-bottom: 35px;
     @media screen and(max-width: 510px) {
       flex-direction: column;
       justify-content: center;
@@ -787,8 +790,12 @@ li {
     .social-block {
       @include adaptiv-css("width", 160, 115);
       &__icon {
-        @include adaptiv-css("width", 40, 30);
-        @include adaptiv-css("height", 40, 30);
+        @include adaptiv-css("width", 40, 35);
+        @include adaptiv-css("height", 40, 35);
+        &:hover {
+          fill: #7485fa;
+          border-color: #7485fa;
+        }
       }
     }
   }

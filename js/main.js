@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
       projectImgRight.classList.remove("animate");
       projectImgRight.classList.add("end-animate");
       fakeImgRight.remove();
-    }, 2000);
+    }, 1500);
     isEndAnimateRight = true;
   }
 
@@ -91,7 +91,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
     centerPadding: "20px",
     responsive: [
       {
