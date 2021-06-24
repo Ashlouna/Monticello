@@ -18,8 +18,8 @@
 
 <body>
 
-    <section class="main-section">
-        <header class="header">
+    <header class="main-section">
+        <div class="header">
             <span class="header__logo"><a href="#"><img src="./img/header-logo.svg" alt="Monticello"></a></span>
             <nav class="header__nav nav" id="header-nav">
                 <ul class="nav__list">
@@ -53,7 +53,8 @@
                 <div class="burger-img"></div>
             </div>
 
-        </header>
+        </div>
+
         <div class="slider">
             <div class="slider__item slider__item_theme_main">
                 <h1 class="main-title">Simple & modern</h1>
@@ -77,146 +78,149 @@
             </div>
         </div>
         <a class="main-section__arrow arrow" href="#projects"></a>
-    </section>
+    </header>
 
-    <section class="projects" id="projects">
-        <h2 class="projects__title">what we do</h2>
-        <article class="projects__block project-block">
+    <main class="main">
+        <section class="projects" id="projects">
+            <h2 class="projects__title">what we do</h2>
+            <article class="projects__block project-block">
 
-            <div class="project-block__img-placeholder">
-                <img src="./img/joel-filipe.png" alt="Joel Philipe building" id="fake-img-left">
-                <div class="project-block__img" id="project-img-left">
-                    <img src="./img/joel-filipe.png" alt="Joel Philipe building">
+                <div class="project-block__img-placeholder">
+                    <!-- <img src="./img/joel-filipe.png" alt="Joel Philipe building" id="fake-img-left"> -->
+                    <div class="project-block__img" id="project-img-left">
+                        <img src="./img/joel-filipe.png" alt="Joel Philipe building">
+                    </div>
                 </div>
-            </div>
-            <div class="project-block__info">
-                <h3 class="project-block__subtitle">one world</h3>
-                <h2 class="project-block__title">trade center</h2>
-                <p class="project-block__txt">Increasing prosperity in our lives
-                    can be accomplished by having the right
-                    frame of mind. The truth is, our thoughts are very powerful.
-                </p>
-                <button class="project-block__btn">more details</button>
-                <p class="project-block__location">
-                    <svg class="project-block__icon">
-                        <use xlink:href="./img/social-sprite.svg#location"></use>
-                    </svg>
-                    New York City, United States - 1776 feet
-                </p>
-            </div>
-        </article>
-        <article class="projects__block project-block" id="projects-article">
-            <div class="project-block__info project-block__info_lefthand">
-                <h3 class="project-block__subtitle">international</h3>
-                <h2 class="project-block__title">commerce center</h2>
-                <p class="project-block__txt">
-                    Successful businesses have many things in common, today we’ll look at the
-                    big ‘R’ of recognition and how a digital advertising network may help.
-                </p>
-                <button class="project-block__btn">more details</button>
-                <p class="project-block__location">
-                    <svg class="project-block__icon">
-                        <use xlink:href="./img/social-sprite.svg#location"></use>
-                    </svg>
-                    Hong Kong - 1588 Feet
-                </p>
-            </div>
-            <div class="project-block__img-placeholder">
-                <img src="./img/joel-filipe.png" alt="Joel Philipe building" id="fake-img-right">
-                <div class="project-block__img project-block__img_righthand" id="project-img-right">
-                    <img src="./img/commerce-centre.png" alt="Commerce center">
-                </div>
-            </div>
-        </article>
-    </section>
-
-    <section class="news" id="news">
-        <h2 class="news__title">latest news</h2>
-        <div class="news__slider">
-            <div class="news__item news-article">
-                <img src="./img/news1.png" alt="Unmatched beauty">
-                <div class="news-article__wrapper">
-                    <h3 class="news-article__title">See The Unmatched Beauty<br> Of The Great. Lakes.</h3>
-                    <p class="news-article__txt">Free directories: directories are perfect for customers that are...
-                        searching for a
+                <div class="project-block__info">
+                    <h3 class="project-block__subtitle">one world</h3>
+                    <h2 class="project-block__title">trade center</h2>
+                    <p class="project-block__txt">Increasing prosperity in our lives
+                        can be accomplished by having the right
+                        frame of mind. The truth is, our thoughts are very powerful.
                     </p>
-                    <div class="news-article__author author-block">
-                        <img src="./img/isaac_dunn.png" alt="Isaac Dunn">
-                        <div class="author-block__wrapper">
-                            <p class="author-block__name">Isaac Dunn</p>
-                            <p class="author-block__date">09 Feb 2017</p>
+                    <button class="project-block__btn">more details</button>
+                    <p class="project-block__location">
+                        <svg class="project-block__icon">
+                            <use xlink:href="./img/social-sprite.svg#location"></use>
+                        </svg>
+                        New York City, United States - 1776 feet
+                    </p>
+                </div>
+            </article>
+            <article class="projects__block project-block" id="projects-article">
+                <div class="project-block__info project-block__info_lefthand">
+                    <h3 class="project-block__subtitle">international</h3>
+                    <h2 class="project-block__title">commerce center</h2>
+                    <p class="project-block__txt">
+                        Successful businesses have many things in common, today we’ll look at the
+                        big ‘R’ of recognition and how a digital advertising network may help.
+                    </p>
+                    <button class="project-block__btn">more details</button>
+                    <p class="project-block__location">
+                        <svg class="project-block__icon">
+                            <use xlink:href="./img/social-sprite.svg#location"></use>
+                        </svg>
+                        Hong Kong - 1588 Feet
+                    </p>
+                </div>
+                <div class="project-block__img-placeholder">
+                    <!-- <img src="./img/joel-filipe.png" alt="Joel Philipe building" id="fake-img-right"> -->
+                    <div class="project-block__img project-block__img_righthand" id="project-img-right">
+                        <img src="./img/commerce-centre.png" alt="Commerce center">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="news" id="news">
+            <h2 class="news__title">latest news</h2>
+            <div class="news__slider">
+                <div class="news__item news-article">
+                    <img src="./img/news1.png" alt="Unmatched beauty">
+                    <div class="news-article__wrapper">
+                        <h3 class="news-article__title">See The Unmatched Beauty<br> Of The Great. Lakes.</h3>
+                        <p class="news-article__txt">Free directories: directories are perfect for customers that are...
+                            searching for a
+                        </p>
+                        <div class="news-article__author author-block">
+                            <img src="./img/isaac_dunn.png" alt="Isaac Dunn">
+                            <div class="author-block__wrapper">
+                                <p class="author-block__name">Isaac Dunn</p>
+                                <p class="author-block__date">09 Feb 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item news-article">
+                    <img src="./img/news2.png" alt="Effective advertising">
+                    <div class="news-article__wrapper">
+                        <h3 class="news-article__title">Effective Advertising<br> Pointers.</h3>
+                        <p class="news-article__txt">Having a home based business is a wonderful asset to your life...
+                        </p>
+                        <div class="news-article__author author-block">
+                            <img src="./img/dominic_freeman.png" alt="Dominic Freeman">
+                            <div class="author-block__wrapper">
+                                <p class="author-block__name">Dominic Freeman</p>
+                                <p class="author-block__date">24 Apr 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item news-article">
+                    <img src="./img/news3.png" alt="Hypnotize yourself">
+                    <div class="news-article__wrapper">
+                        <h3 class="news-article__title">Hypnotize Yourself Into The<br> Ghost.
+                            Of Christmas Future</h3>
+                        <p class="news-article__txt">There are many things that are important to catalog design....</p>
+                        <div class="news-article__author author-block">
+                            <img src="./img/alice_ward.png" alt="Alice Ward">
+                            <div class="author-block__wrapper">
+                                <p class="author-block__name">Alice Ward</p>
+                                <p class="author-block__date">30 Dec 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item news-article">
+                    <img src="./img/news1.png" alt="Unmatched beauty">
+                    <div class="news-article__wrapper">
+                        <h3 class="news-article__title">See The Unmatched Beauty<br> Of The Great. Lakes.</h3>
+                        <p class="news-article__txt">Free directories: directories are perfect for customers that are...
+                            searching for a</p>
+                        <div class="news-article__author author-block">
+                            <img src="./img/isaac_dunn.png" alt="Isaac Dunn">
+                            <div class="author-block__wrapper">
+                                <p class="author-block__name">Isaac Dunn</p>
+                                <p class="author-block__date">09 Feb 2017</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="news__item news-article">
-                <img src="./img/news2.png" alt="Effective advertising">
-                <div class="news-article__wrapper">
-                    <h3 class="news-article__title">Effective Advertising<br> Pointers.</h3>
-                    <p class="news-article__txt">Having a home based business is a wonderful asset to your life...</p>
-                    <div class="news-article__author author-block">
-                        <img src="./img/dominic_freeman.png" alt="Dominic Freeman">
-                        <div class="author-block__wrapper">
-                            <p class="author-block__name">Dominic Freeman</p>
-                            <p class="author-block__date">24 Apr 2017</p>
-                        </div>
-                    </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <h2 class="gallery__title">gallery</h2>
+            <div class="gallery__content">
+                <div class="gallery__big-img" id="big-img">
+                    <img src="./img/scott-webb.png" alt="Scott Webb">
+                </div>
+                <div class="gallery__wrapper-img">
+                    <div class="gallery__img"><img src="./img/gallery1.png" alt="Building 1"></div>
+                    <div class="gallery__img"><img src="./img/gallery2.png" alt="Building 2"></div>
+                    <div class="gallery__img"><img src="./img/gallery3.png" alt="Building 3"></div>
+                    <div class="gallery__img"><img src="./img/gallery4.png" alt="Building 4"></div>
                 </div>
             </div>
-            <div class="news__item news-article">
-                <img src="./img/news3.png" alt="Hypnotize yourself">
-                <div class="news-article__wrapper">
-                    <h3 class="news-article__title">Hypnotize Yourself Into The<br> Ghost.
-                        Of Christmas Future</h3>
-                    <p class="news-article__txt">There are many things that are important to catalog design....</p>
-                    <div class="news-article__author author-block">
-                        <img src="./img/alice_ward.png" alt="Alice Ward">
-                        <div class="author-block__wrapper">
-                            <p class="author-block__name">Alice Ward</p>
-                            <p class="author-block__date">30 Dec 2017</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="news__item news-article">
-                <img src="./img/news1.png" alt="Unmatched beauty">
-                <div class="news-article__wrapper">
-                    <h3 class="news-article__title">See The Unmatched Beauty<br> Of The Great. Lakes.</h3>
-                    <p class="news-article__txt">Free directories: directories are perfect for customers that are...
-                        searching for a</p>
-                    <div class="news-article__author author-block">
-                        <img src="./img/isaac_dunn.png" alt="Isaac Dunn">
-                        <div class="author-block__wrapper">
-                            <p class="author-block__name">Isaac Dunn</p>
-                            <p class="author-block__date">09 Feb 2017</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <button class="gallery__btn">see more</button>
+        </section>
 
-    <section class="gallery" id="gallery">
-        <h2 class="gallery__title">gallery</h2>
-        <div class="gallery__content">
-            <div class="gallery__big-img" id="big-img">
-                <img src="./img/scott-webb.png" alt="Scott Webb">
-            </div>
-            <div class="gallery__wrapper-img">
-                <div class="gallery__img"><img src="./img/gallery1.png" alt="Building 1"></div>
-                <div class="gallery__img"><img src="./img/gallery2.png" alt="Building 2"></div>
-                <div class="gallery__img"><img src="./img/gallery3.png" alt="Building 3"></div>
-                <div class="gallery__img"><img src="./img/gallery4.png" alt="Building 4"></div>
-            </div>
-        </div>
-        <button class="gallery__btn">see more</button>
-    </section>
+        <section class="map" id="map">
 
-    <section class="map" id="map">
+        </section>
+    </main>
 
-    </section>
-
-    <section class="footer" id="footer">
+    <footer class="footer" id="footer">
         <div class="footer__form form-block">
             <h2 class="form-block__title">get in touch</h2>
             <div class="form-block__wrapper">
@@ -232,15 +236,15 @@
                     </ul>
                 </div>
                 <form action="#" method="GET" class="form-block__form">
-                    <input type="text" placeholder="Name" name="name">
-                    <input type="email" name="email" id="emailInp" placeholder="Email">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" name="email" id="emailInp" placeholder="Email" required>
                     <button class="form-block__btn" type="submit">Submit</button>
                 </form>
             </div>
         </div>
 
 
-        <header class="header">
+        <div class="header">
             <span class="header__logo"><a href="#"><img src="./img/header-logo.svg" alt="Monticello"></a></span>
             <div class="header__social-block social-block">
                 <a href="#" class="social-block__link">
@@ -259,12 +263,12 @@
                     </svg>
                 </a>
             </div>
-        </header>
+        </div>
         <p class="footer__copy-block">
             <span class="footer__copy">Copyrights © 2017 Monticello</span>
             <span class="footer__who-made">Made with <i class="fas fa-heart"></i> by Ga Huy</span>
         </p>
-    </section>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
